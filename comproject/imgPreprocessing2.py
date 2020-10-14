@@ -1,0 +1,42 @@
+# -*- coding: utf-8 -*-
+# @TIME     : 2020/9/28 17:23
+# @Author   : Chen Shan
+# @Email    : jacobon@foxmail.com
+# @File     : imgPreprocessing2.py
+# @Software : PyCharm
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
+img = cv2.imread('mydog.jpg')
+
+# 2d卷积
+# kernel = np.ones((5,5),np.float32)/25
+# dst = cv2.filter2D(img,-1,kernel)
+#
+# plt.subplot(121),plt.imshow(img),plt.title('Original')
+# plt.xticks([]), plt.yticks([])
+#
+# plt.subplot(122),plt.imshow(dst),plt.title('Averaging')
+# plt.xticks([]), plt.yticks([])
+# plt.show()
+
+# 图像模糊
+# blur = cv2.blur(img,(5,5))
+#
+# plt.subplot(121),plt.imshow(img),plt.title('Original')
+# plt.xticks([]), plt.yticks([])
+#
+# plt.subplot(122),plt.imshow(blur),plt.title('Blurred')
+# plt.xticks([]), plt.yticks([])
+# plt.show()
+
+# 高斯模糊
+# blur = cv2.GaussianBlur(img,(5,5),0)
+#
+# plt.subplot(121),plt.imshow(img),plt.title('Original')
+# plt.xticks([]), plt.yticks([])
+#
+# plt.subplot(122),plt.imshow(blur),plt.title('Gaussian')
+# plt.xticks([]), plt.yticks([])
+# plt.show()
