@@ -77,6 +77,7 @@ cy = int(M['m01']/M['m00'])
 
 img2 = cv2.imread('images/star.png')
 img2_gray = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+# cv_show('img_2',img2)
 
 ret,thresh = cv2.threshold(img2_gray,127,255,0)
 contours,hierarchy = cv2.findContours(thresh, 1, 2)
@@ -133,7 +134,7 @@ for meth in methods:
     plt.subplot(122), plt.imshow(img, cmap='gray')
     plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
     plt.suptitle(meth)
-    # plt.show()
+    plt.show()
 
 img_rgb = cv2.imread('images/mario.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
@@ -149,7 +150,7 @@ img_rgb2 = img_rgb.copy()
 for pt in zip(*loc[::-1]):  #*号表示可选参数
     cv2.rectangle(img_rgb2, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
 # cv2.imwrite('res.png',img_rgb)
-cv_show('img_rgb',img_rgb2)
+# cv_show('img_rgb',img_rgb2)
 
 #res = np.stack((img_rgb,img_rgb2))
 # cv_show('res',res)
